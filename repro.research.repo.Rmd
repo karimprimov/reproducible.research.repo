@@ -1,0 +1,35 @@
+---
+title: "reproducible.research.repo.rmd"
+author: "Karim Primov"
+date: "1/27/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#start adding code
+s <- c("this", "is", "a", "vector", "of", "strings") #vector of character strings
+m <- matrix(data=1:40, nrow=5, ncol=8) #data matrix
+df <-
+  data.frame(
+    firstName = c("Rick", "Negan", "Dwight", "Maggie", "Michonne"),
+    community = c("Alexandria", "Saviors", "Saviors", "Hiltop", "Alexandria"),
+    sex = c("M", "M", "M", "F", "F"),
+    age = c(42, 40, 33, 28, 31)
+  )
+df
+df[[2]]
+df <- read.csv(file = "~/Desktop/UTAustin/2022/SP22.courses/Applied Data Analysis/week2.repro.research/CPDS-1960-2014-reduced.csv",
+    sep = ",",
+    header = TRUE,
+    stringsAsFactors = FALSE
+)
+head(df)
+tail(df)
+str(df)
+dplyr::glimpse(df)
+
+```
